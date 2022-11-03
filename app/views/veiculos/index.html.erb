@@ -1,0 +1,19 @@
+<h1>locadora</h1>
+
+
+
+<ul>
+  <% @veiculos.each do |veiculo| %>
+   
+      <li>
+        <%= link_to veiculo.placa, veiculo %>
+      </li>
+   
+  <% end %>
+</ul>
+
+<%= link_to "New Veiculo", new_veiculo_path %>
+
+
+
+

@@ -1,0 +1,23 @@
+<%= form_with model: veiculo do |form| %>
+  <div>
+    <%= form.label :cor %><br>
+    <%= form.text_field :cor %>
+    <% veiculo.errors.full_messages_for(:cor).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :placa %><br>
+    <%= form.text_area :placa %><br>
+    <% veiculo.errors.full_messages_for(:placa).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

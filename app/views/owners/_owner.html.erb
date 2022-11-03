@@ -1,0 +1,17 @@
+  <p>
+    <strong>Name:</strong>
+    <%= owner.name %>
+  </p>
+
+  <p>
+    <strong>cnh:</strong>
+    <%= owner.cnh %>
+  </p>
+
+  <p>
+    <%= link_to "Destroy owner", [owner.veiculo, owner], data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+  </p>
+

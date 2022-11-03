@@ -1,0 +1,17 @@
+<h1><%= @veiculo.placa %></h1>
+
+<p><%= @veiculo.cor %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_veiculo_path(@veiculo) %></li>
+  <li><%= link_to "Destroy", veiculo_path(@veiculo), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+<h2>owner</h2>
+<%= render @veiculo.owners %>
+
+<h2>Add a owner:</h2>
+<%= render 'owners/form' %>

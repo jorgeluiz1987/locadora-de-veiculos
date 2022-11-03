@@ -1,0 +1,13 @@
+<%= form_with model: [ @veiculo, @veiculo.owners.build ] do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :cnh %><br>
+    <%= form.text_area :cnh %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
